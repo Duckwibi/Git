@@ -1,0 +1,53 @@
+git --version : Hiển thị phiên bản của Git
+cd (Đường dẫn folder hoặc tên folder) : Di chuyển vị trí tới folder chỉ định
+cd .. : Di chuyển về folder trước đó
+ls : Hiển thị danh sách các file/folder
+mkdir (Tên folder) : Tạo folder
+touch (Tên file) : Tạo file
+echo (Nội dung) : Hiển thị nội dung ra màn hình console
+echo (Nội dung) > (Tên file) : Ghi đè nội dung vào file chỉ định, không có file thì tạo mới
+echo (Nội dung) >> (Tên file) : Thêm nội dung vào file chỉ định
+cat (Tên file) : Hiển thị nội dung của file ra màn hình console
+diff (Tên file 1) (Tên file 2) : So sánh 2 file
+rm (Tên file) : Xóa file
+rm -d (Tên folder) : Xóa folder trống
+rm -r (Tên folder) : Xóa folder và các file của nó
+git --help : Hiển thị trợ giúp
+git status : Hiển thị trạng thái của thư mục đang làm việc
+git log : Hiển thị lịch sử các commit
+git log --oneline
+git init (Tên repo) : Tạo local repo
+git clone (Tên repo) (Tên clone) : Tải bản sao của repo trung tâm về folder chỉ định, không có thì tạo mới folder
+git config -l : Hiển thị tất cả thông tin cấu hình
+git config -l --scope : Hiển thị thông tin cấu hình ở phạm vi cụ thể
+	--scope: --system, --global, --local
+git config --scope (Tên option) (Value) : Sửa thông tin cấu hình
+git add (Tên file hoặc nhiều file) : Lưu file hoặc folder vào index
+git add . : Lưu tất cả thay đổi hiện tại vào index
+git commit -m (Nội dung) : Lưu các thông tin trong index vào header
+git diff : So sánh phiên bản làm việc hiện tại so với phiên bản trong lần commit cuối
+rm -rf (Tên repo hoặc tên repo local) : Xóa repo trung tâm và các repo local
+git init --bare : Tạo repo trung tâm
+git fetch : Lấy thông tin về commit mới nhất từ repo trung tâm
+git pull : Lấy dữ liệu mới nhất từ repo trung tâm về local repo
+git push : Đẩy các commit lên repo trung tâm
+git checkout (Tên nhánh) : Di chuyển tới nhánh chỉ định
+git branch (Tên nhánh) : Tạo nhánh
+git branch -l : Hiển thị các nhánh
+git push -u origin (Tên nhánh)
+git merge (Tên nhánh) : Gộp nhánh với nhánh chính
+git rebase (Tên nhánh) : Tái cơ sở cho 1 nhánh
+git rebase --continue : Sau khi sửa lỗi xung đột dùng add và dùng lệnh này sau đó commit rồi push
+git rebase --skip : Vẫn tiếp tục quá trình tái cơ sở nhưng bỏ qua xung đột
+git branch -d (Tên nhánh) : Xóa nhánh
+git reset : Xóa index
+git reset --mixed (Commit hash) : Chỉ xóa index của commit sau commit chỉ định, các thay đổi trong vùng làm việc 	vẫn giữ nguyên
+git reset --hard (Commit hash) : Xóa commit sau commit chỉ định và các thay đổi trong vùng làm việc
+git revert (Commit hash) : Tạo một commit bản sao của commit trước commit chỉ định và thay đỏi vùng làm việc
+git revert --continue : Sau khi sửa lỗi xung đột dùng add và dùng lệnh này
+git revert --skip : Hủy quá trình revert khi gặp xung đột
+
+git remote add origin (Đường dẫn)
+git branch -M (Tên nhánh)
+git pull (Tên romote Vd: origin) (Tên branch VD: main) --allow-unrelated-histories
+
